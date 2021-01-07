@@ -1,0 +1,62 @@
+.details {
+    width: 90%;
+    height: 90%;
+    margin-right: 40px;
+    margin-left: 64px;
+    background-color: lightseagreen;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 4em;
+    min-height: 650px;
+    max-width: 970px;
+    margin: 0 auto;
+    padding: 34px 12px;
+    position: relative;
+
+    &__features {
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-rows: min-content;
+        gap: 0px 10px;
+
+        
+        &-list {
+            list-style: none;
+            padding-inline-start: 0px;     
+            
+            &-1 {
+                background-color: yellow;            
+            }
+            
+            &-2 {
+                background-color: blueviolet;
+            }
+        }
+    }
+    
+    &__quote {
+        
+    }
+    
+    &__description {
+        
+    }
+    
+    &__video {
+        
+    }
+    
+    &__list {
+        
+        
+    }
+    
+    &__widget {
+        
+    }
+    
+    
+}
+
