@@ -11,6 +11,8 @@
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 0px;
+    justify-content: center;
+    align-items: center;
 
     // display: grid;
     // grid-template-columns: 1fr 1.5fr;
