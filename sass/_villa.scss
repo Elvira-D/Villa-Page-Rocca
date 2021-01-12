@@ -2,7 +2,6 @@
 
     width: 90%;
     height: 90%;
-    background-color: salmon;
     margin: 0 auto;
 
     display: grid;
@@ -12,14 +11,7 @@
     grid-row-gap: 0px;
     align-items: center;
 
-    // display: grid;
-    // grid-template-columns: 1fr 1.5fr;
-    // grid-template-rows: 1fr 1fr;
-    // gap: 0px 10px;
-    // grid-template-areas:
-    // "villa__specs villa__slideshow"
-    // "villa__map villa__slideshow2";
-
+    
     &__left {
 
         .villa__specs {
@@ -45,18 +37,13 @@
                 font-size: 16px;
             }
     
-            // &-logo {
-            //     width: 47px;
-            //     height: 48px;
-            //     margin: 18px;
-            // }
-    
+             
             &-facilities {
                 
                 list-style: none;
                 margin: 6px 0 0;
                 font-family: 'Montserrat';
-                padding-inline-start: 30px;
+                
     
                 & li {
                     display: inline;
@@ -130,7 +117,8 @@
         .villa__map {
             grid-column: 1 / 2;
             grid-row: 2 / 3;
-            margin-left: 20px;   
+            margin-left: 10px;  
+            
             
         }
     }
@@ -140,7 +128,7 @@
         max-width: 70%;
         
         .villa__slideshow {
-            width: 680px;
+            width: 760px;
             grid-column: 2 / 3;
             grid-row: 1 / 3;
             overflow: hidden;

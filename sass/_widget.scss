@@ -1,0 +1,235 @@
+.details__widget {
+
+    max-width: 395px;
+
+    &-box {
+        
+        border: 1px solid $dark-royal-blue;
+        border-radius: 8px;
+        padding: 20px 25px;
+        
+        
+        
+
+        & .widget-box-decoration {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: calc(100% - 50px);
+            margin: 0 auto;
+            
+
+            & .line {
+                display: inline-block;
+                width: 122px;
+                opacity: 0.2;
+                border-bottom: solid 1px $dark-royal-blue;
+                
+                        
+                }
+            
+            & .diamond {
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    background-color: #21c1ff;
+                    transform: rotate(45deg);
+            }
+
+
+        }
+
+
+        &-grid {
+
+            &-checkin {
+                background-image: url(../src/calendar.svg);
+                background-position: 98% 30%;
+                background-size: 25px auto;
+                background-repeat: no-repeat;
+                    
+                text-align: center;
+                margin: 5px 5px 13px 2px;
+                padding: 10px 46px 14px 24px;
+                border: solid 1px #ebeef3;
+                border-radius: 8px;
+                cursor: pointer;
+                
+            }
+
+            &-guests,
+            &-rooms {
+                height: 40px;
+                padding-top: 10px;
+                padding-left: 10px;
+                border: solid 1px #ebeef3;
+                border-radius: 6px;
+                display: relative;
+                cursor: pointer;
+            }
+
+            &-guests::after {
+                        content: "\25BC";
+                        width: 10px;
+                        height: 10px;
+                        color: #21c1ff;
+                        position: absolute;
+                        right: 12%;
+                        
+                    }
+            &-rooms::after {
+                content: "\25BC";
+                width: 10px;
+                height: 10px;
+                color: #21c1ff;
+                position: absolute;
+                right: -6%;
+                
+            }
+        
+        }
+                
+        & .book {
+
+            & button {
+                width: 295px;
+                height: 50px;
+                margin: 4px 22px 16px 1px;
+                padding: 12px 20px 11px;
+                background-color: $dark-royal-blue;
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                text-align: center;
+                color: #ffffff;
+                outline: none;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+
+                clip-path: polygon(8px  0%, calc(100%  -  8px) 0%, 100%  8px, 100%  calc(100%  -  8px), calc(100%  -  8px) 100%, 8px  100%, 0%  calc(100%  -  8px), 0%  8px);
+
+            }
+
+            & .heart {
+                display: inline-block;
+                background-image: url(../src/inactive-heart.svg);
+                width: 21px;
+                height: 18px;
+                object-fit: contain;
+                background-repeat: no-repeat;
+                margin-left: -5px;
+            }
+                 
+            
+        }    
+
+        & .phone {
+
+            &-icon {
+                display: inline-block;
+                background-image: url(../src/phone.svg);
+                width: 30px;
+                height: 30px;
+                background-size: 30px 30px;
+                object-fit: contain;
+                background-repeat: no-repeat;
+                margin-left: -10px;
+                margin-bottom: -5px;
+            }
+
+            &-details {
+                display: inline-block;
+                font-family: 'Roboto', sans-serif;
+                font-size: 16px;
+                color: $dark-royal-blue;
+
+                & span {
+                    text-transform: uppercase;
+                    color: #9b9b9b;
+                }
+            }
+        }
+        
+        & .availability {
+            width: 347px;
+            height: 100px;
+            margin: 18px 1px 0 4px;
+            padding: 8px 3px 9px 29px;
+            background-color: #e5eef4;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            color: $dark-royal-blue;
+            text-align: center;
+
+            background-image: url(../src/lock-solid.svg);
+            background-position: 0% 53%;
+            background-size: 35px;
+            background-repeat: no-repeat;
+            color: $dark-royal-blue;
+            
+
+            & a {
+                color: $brown-orange;
+                text-decoration: none;
+            }
+        }
+
+        
+    }
+
+    & .pdf {
+        
+        margin-left: 30px;
+        display: flex;
+        align-items: center;
+    
+
+        &-icon {
+            background-image: url(../src/pdf-icon.svg);
+            width: 25px;
+            height: 30px;
+            background-repeat: no-repeat;
+            display: inline-block;
+            background-size: 20px auto;
+            color: #616185;
+            margin-right: 13px;
+        }
+
+        &-text {
+            display: inline;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            color: $dark-royal-blue;
+        }
+
+    }
+
+    & .share {
+        
+        margin-left: 30px;
+        display: flex;
+        align-items: center;
+    
+
+        &-icon {
+            background-image: url(../src/share-icon.svg);
+            width: 25px;
+            height: 25px;
+            background-repeat: no-repeat;
+            display: inline-block;
+            background-size: 20px auto;
+            color: #616185;
+            margin-right: 13px;
+        }
+
+        &-text {
+            display: inline;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            color: $dark-royal-blue;
+        }
+
+    }
+}
+
