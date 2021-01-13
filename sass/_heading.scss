@@ -1,7 +1,29 @@
 .ttt-heading {
-    width: 90%;
-    display: block;
-    margin: 0 auto;
+    background-image: url(../src/TTT-heading.PNG);
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+    
+
+    @media only screen and (max-width: 600px) {
+        display: none;
+        
+    }
+
+    &-mobile {
+        background-image: url(../src/heading-mobile.PNG);
+        height: 130px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100% auto;
+        display: none;
+
+        @media only screen and (max-width: 600px) {
+            display: block;
+            
+        }
+    }
     
 }
 

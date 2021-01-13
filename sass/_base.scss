@@ -6,9 +6,13 @@ $brown-orange: #b56f00;
 $grey-blue: #687499;
 $grey-blue-2: #a1abc5;
 
+// RESPONSIVE BREAKPOINTS
+$mobile-bp: 600px;
+
 * {
     padding: 0;
     box-sizing: border-box;
+    
   }
 
 .container {
