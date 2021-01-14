@@ -16,7 +16,7 @@
 
     @media only screen and (max-width: 600px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
               
     }
 
@@ -29,7 +29,16 @@
         grid-row: 1 / 2;
         grid-column: 1 / 2;
 
-    
+        @media only screen and (max-width: 600px) {
+            
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+                  
+        }
+
+
+
+      
              
         &-list {
             list-style: none;
@@ -38,7 +47,13 @@
             color: $dark-royal-blue;
             font-size: 16px;
             line-height: 21px;
-             
+            
+
+            // @media only screen and (max-width: 600px) {
+            //     grid-row: 4 / 5;
+            //     grid-column: 1 / 2;
+                      
+            // }
             
             &-1 {
                 position: relative;
@@ -93,6 +108,13 @@
         grid-column: 1 / 2;
         margin: 100px;
 
+        @media only screen and (max-width: 600px) {
+            
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+                  
+        }
+
         &::before {
             content: "\201C";
             font-size: 50px;
@@ -127,6 +149,14 @@
         font-size: 16px;
         line-height: 21px;
 
+        @media only screen and (max-width: 600px) {
+            
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+                  
+        }
+
+        
         
     }
     
@@ -137,6 +167,15 @@
         grid-row: 1 / 2;
         grid-column: 1 / 2;
         margin-top: 500px;
+
+        @media only screen and (max-width: 600px) {
+            
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            height: 0;
+            margin-top: 0;
+                  
+        }
         
     }
     
@@ -144,6 +183,13 @@
         grid-row: 1 / 2;
         grid-column: 1 / 2;
         margin-top: 875px;
+
+        @media only screen and (max-width: 600px) {
+                grid-row: 4 / 5;
+                grid-column: 1 / 2;
+                margin-top: 0;
+                      
+            }
 
         &-item {
             
