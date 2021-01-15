@@ -18,3 +18,13 @@ $mobile-bp: 600px;
 .container {
     margin-right: 50px;
 }
+
+
+html {
+  --top-spacing: 50px;
+  scroll-padding-top: var(--top-spacing);
+  
+  margin: var(--top-spacing) auto;
+  
+}
+

@@ -5,11 +5,11 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% auto; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     /* line 1, sass/_heading.scss */
     .ttt-heading {
       display: none; } }
-  /* line 14, sass/_heading.scss */
+  /* line 15, sass/_heading.scss */
   .ttt-heading-mobile {
     background-image: url(../src/heading-mobile.PNG);
     height: 130px;
@@ -18,9 +18,22 @@
     background-size: 100% auto;
     display: none; }
     @media only screen and (max-width: 600px) {
-      /* line 14, sass/_heading.scss */
+      /* line 15, sass/_heading.scss */
       .ttt-heading-mobile {
         display: block; } }
+  /* line 29, sass/_heading.scss */
+  .ttt-heading-desktop {
+    background-image: url(../src/heading-desktop.PNG);
+    height: 130px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: none; }
+    @media only screen and (min-width: 601px) and (max-width: 768px) {
+      /* line 29, sass/_heading.scss */
+      .ttt-heading-desktop {
+        display: block;
+        position: fixed;
+        width: 80%; } }
 
 /* line 12, sass/_base.scss */
 * {
@@ -30,6 +43,12 @@
 /* line 18, sass/_base.scss */
 .container {
   margin-right: 50px; }
+
+/* line 23, sass/_base.scss */
+html {
+  --top-spacing: 50px;
+  scroll-padding-top: var(--top-spacing);
+  margin: var(--top-spacing) auto; }
 
 /* line 1, sass/_villa.scss */
 .villa {
@@ -47,39 +66,53 @@
     .villa {
       grid-template-columns: 1fr;
       grid-template-rows: 0.5fr 0.5fr; } }
-  /* line 25, sass/_villa.scss */
+  @media only screen and (min-width: 601px) and (max-width: 768px) {
+    /* line 1, sass/_villa.scss */
+    .villa {
+      display: flex;
+      flex-direction: column-reverse; } }
+  /* line 30, sass/_villa.scss */
   .villa__left .villa__specs {
     margin-left: 20px; }
-    /* line 29, sass/_villa.scss */
+    @media only screen and (min-width: 601px) and (max-width: 768px) {
+      /* line 30, sass/_villa.scss */
+      .villa__left .villa__specs {
+        width: 600px;
+        margin: 0 50px; } }
+    /* line 42, sass/_villa.scss */
     .villa__left .villa__specs-name {
       color: #001871;
       font-family: 'Montserrat';
       font-size: 24px; }
-    /* line 35, sass/_villa.scss */
+    /* line 48, sass/_villa.scss */
     .villa__left .villa__specs-region {
       color: #21c1ff;
       font-family: 'Montserrat';
       font-size: 16px;
       text-transform: uppercase; }
-    /* line 42, sass/_villa.scss */
+    /* line 55, sass/_villa.scss */
     .villa__left .villa__specs-location {
       color: #8c8c8c;
       font-family: 'Montserrat';
       font-size: 16px; }
-    /* line 49, sass/_villa.scss */
+    /* line 62, sass/_villa.scss */
     .villa__left .villa__specs-facilities {
       list-style: none;
       margin: 6px 0 0;
       font-family: 'Montserrat'; }
-      /* line 56, sass/_villa.scss */
+      /* line 69, sass/_villa.scss */
       .villa__left .villa__specs-facilities li {
         display: inline;
         color: #8c8c8c; }
-        /* line 60, sass/_villa.scss */
+        @media only screen and (min-width: 601px) and (max-width: 768px) {
+          /* line 69, sass/_villa.scss */
+          .villa__left .villa__specs-facilities li {
+            margin-right: 50px; } }
+        /* line 78, sass/_villa.scss */
         .villa__left .villa__specs-facilities li p {
           display: inline;
           color: #001871; }
-      /* line 67, sass/_villa.scss */
+      /* line 85, sass/_villa.scss */
       .villa__left .villa__specs-facilities-icons {
         display: inline-block;
         text-align: center;
@@ -88,21 +121,21 @@
         background-repeat: no-repeat;
         width: 26px;
         height: 17px; }
-        /* line 77, sass/_villa.scss */
+        /* line 95, sass/_villa.scss */
         .villa__left .villa__specs-facilities-icons.guests {
           background-image: url(../../src/guests.svg); }
-        /* line 82, sass/_villa.scss */
+        /* line 100, sass/_villa.scss */
         .villa__left .villa__specs-facilities-icons.beds {
           background-image: url(../../src/beds.svg); }
-        /* line 87, sass/_villa.scss */
+        /* line 105, sass/_villa.scss */
         .villa__left .villa__specs-facilities-icons.baths {
           background-image: url(../../src/baths.svg); }
-    /* line 101, sass/_villa.scss */
+    /* line 119, sass/_villa.scss */
     .villa__left .villa__specs-logo {
       width: 47px;
       height: 48px;
       margin: 34px 18px; }
-    /* line 107, sass/_villa.scss */
+    /* line 125, sass/_villa.scss */
     .villa__left .villa__specs-description {
       font-family: 'Roboto', sans-serif;
       font-size: 14px;
@@ -114,66 +147,61 @@
       position: relative;
       bottom: 103px;
       left: 80px; }
-  /* line 125, sass/_villa.scss */
+  /* line 143, sass/_villa.scss */
   .villa__left .villa__map {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     margin-left: 10px; }
-    @media only screen and (max-width: 600px) {
-      /* line 125, sass/_villa.scss */
+    @media only screen and (max-width: 768px) {
+      /* line 143, sass/_villa.scss */
       .villa__left .villa__map {
         display: none; } }
-  /* line 139, sass/_villa.scss */
+  /* line 157, sass/_villa.scss */
   .villa__right {
-    max-width: 100%; }
-    /* line 143, sass/_villa.scss */
+    max-width: 100%;
+    height: auto; }
+    /* line 164, sass/_villa.scss */
     .villa__right .villa__slideshow {
-      width: 100%;
-      max-width: 730px;
-      height: 100%;
+      max-width: 100%;
+      height: auto;
       grid-column: 2 / 3;
       grid-row: 1 / 3;
       overflow: hidden; }
-      @media only screen and (max-width: 600px) {
-        /* line 143, sass/_villa.scss */
-        .villa__right .villa__slideshow {
-          max-width: 520px; } }
 
 /* line 1, sass/_details.scss */
 .details {
   width: 90%;
   height: 90%;
-  margin-right: 40px;
-  margin-left: 64px;
+  margin-left: 100px;
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  grid-template-rows: min-content;
-  grid-column-gap: 4em;
-  min-height: 900px;
-  max-width: 970px;
-  margin: 0 auto;
-  padding: 34px 12px;
-  position: relative; }
-  @media only screen and (max-width: 600px) {
+  grid-template-columns: 52% 1fr;
+  grid-template-rows: 6% 9% 14% 22% 30%;
+  gap: 0px 10px;
+  grid-template-areas: "list widget" "quote widget" "description widget" "video widget" "accordion widget"; }
+  @media only screen and (max-width: 768px) {
     /* line 1, sass/_details.scss */
     .details {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 400px 1fr; } }
-  /* line 23, sass/_details.scss */
+      grid-template-rows: 1fr max-content max-content max-content 1fr;
+      gap: 0px 0px;
+      grid-template-areas: "widget" "features" "quote" "description" "video" "list";
+      margin-left: 50px; } }
+  /* line 35, sass/_details.scss */
   .details__features {
     display: flex;
     justify-content: space-around;
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-    height: 6%; }
+    grid-area: list; }
     @media only screen and (max-width: 600px) {
-      /* line 23, sass/_details.scss */
+      /* line 35, sass/_details.scss */
       .details__features {
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
-        flex-direction: column;
-        height: 0; } }
-    /* line 42, sass/_details.scss */
+        grid-area: features;
+        display: inline; } }
+    @media only screen and (min-width: 601px) and (max-width: 768px) {
+      /* line 35, sass/_details.scss */
+      .details__features {
+        grid-area: widget;
+        display: inline; } }
+    /* line 58, sass/_details.scss */
     .details__features-list {
       margin-right: 10%;
       list-style: none;
@@ -182,14 +210,15 @@
       color: #001871;
       font-size: 16px;
       line-height: 21px; }
-      @media only screen and (max-width: 600px) {
-        /* line 42, sass/_details.scss */
+      @media only screen and (min-width: 600px) and (max-width: 768px) {
+        /* line 58, sass/_details.scss */
         .details__features-list {
-          margin: 0; } }
-      /* line 58, sass/_details.scss */
+          margin-top: 0;
+          margin-bottom: 0; } }
+      /* line 75, sass/_details.scss */
       .details__features-list-1 {
         position: relative; }
-        /* line 63, sass/_details.scss */
+        /* line 80, sass/_details.scss */
         .details__features-list-1::before {
           content: "\25A0";
           width: 6px;
@@ -201,10 +230,10 @@
           position: absolute;
           left: -10px;
           top: -1px; }
-      /* line 78, sass/_details.scss */
+      /* line 95, sass/_details.scss */
       .details__features-list-2 {
         position: relative; }
-        /* line 81, sass/_details.scss */
+        /* line 98, sass/_details.scss */
         .details__features-list-2::before {
           content: "\25A0";
           width: 6px;
@@ -216,7 +245,7 @@
           position: absolute;
           left: -10px;
           top: -1px; }
-  /* line 98, sass/_details.scss */
+  /* line 115, sass/_details.scss */
   .details__quote {
     width: 400px;
     height: 170px;
@@ -224,71 +253,69 @@
     color: #001871;
     font-size: 16px;
     line-height: 21px;
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-    margin: 100px; }
+    grid-area: quote; }
     @media only screen and (max-width: 600px) {
-      /* line 98, sass/_details.scss */
+      /* line 115, sass/_details.scss */
       .details__quote {
-        grid-column: 1 / 2;
-        grid-row: 2 / 3; } }
-    /* line 118, sass/_details.scss */
+        grid-area: quote;
+        margin-top: 30px; } }
+    /* line 133, sass/_details.scss */
     .details__quote::before {
       content: "\201C";
       font-size: 50px;
       color: #b56f00;
       display: block;
-      transform: translateX(-25px); }
-    /* line 128, sass/_details.scss */
+      transform: translate(-23px, 8px); }
+    /* line 143, sass/_details.scss */
     .details__quote::after {
       content: "\201D";
       font-size: 50px;
       color: #b56f00;
       display: block;
       transform: translateX(230px); }
-    /* line 137, sass/_details.scss */
+    /* line 152, sass/_details.scss */
     .details__quote-caption {
       display: inline; }
-  /* line 142, sass/_details.scss */
+  /* line 157, sass/_details.scss */
   .details__description {
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-    margin-top: 250px;
+    grid-area: description;
     font-family: 'Roboto', sans-serif;
     color: #001871;
     font-size: 16px;
     line-height: 21px; }
     @media only screen and (max-width: 600px) {
-      /* line 142, sass/_details.scss */
+      /* line 157, sass/_details.scss */
       .details__description {
-        grid-column: 1 / 2;
-        grid-row: 2 / 3; } }
-  /* line 163, sass/_details.scss */
+        grid-area: description; } }
+  /* line 175, sass/_details.scss */
   .details__video {
-    width: 150px;
-    height: 100px;
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-    margin-top: 500px; }
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%;
+    grid-area: video; }
+    /* line 184, sass/_details.scss */
+    .details__video .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border: none; }
     @media only screen and (max-width: 600px) {
-      /* line 163, sass/_details.scss */
+      /* line 175, sass/_details.scss */
       .details__video {
-        grid-column: 1 / 2;
-        grid-row: 3 / 4;
-        height: 0;
-        margin-top: 0; } }
-  /* line 182, sass/_details.scss */
+        grid-area: video; } }
+  /* line 203, sass/_details.scss */
   .details__list {
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-    margin-top: 875px; }
-    @media only screen and (max-width: 600px) {
-      /* line 182, sass/_details.scss */
+    grid-area: accordion; }
+    @media only screen and (max-width: 768px) {
+      /* line 203, sass/_details.scss */
       .details__list {
-        grid-row: 4 / 5;
-        grid-column: 1 / 2;
-        margin-top: 0; } }
-    /* line 194, sass/_details.scss */
+        grid-area: list; } }
+    /* line 214, sass/_details.scss */
     .details__list-item {
       list-style: none;
       font-family: 'Montserrat';
@@ -299,15 +326,15 @@
       border-bottom: 1px solid #eaeff4;
       margin-top: 10px;
       position: relative; }
-      /* line 206, sass/_details.scss */
+      /* line 226, sass/_details.scss */
       .details__list-item-i {
         color: #b56f00;
         font-size: 16px; }
-      /* line 211, sass/_details.scss */
+      /* line 231, sass/_details.scss */
       .details__list-item:hover {
         background-color: rgba(234, 229, 229, 0.8);
         cursor: pointer; }
-      /* line 219, sass/_details.scss */
+      /* line 239, sass/_details.scss */
       .details__list-item::after {
         display: block;
         width: 0;
@@ -319,51 +346,57 @@
         border-color: #2196f3 transparent transparent;
         float: right;
         margin: 15px 10px 7px 20px; }
-  /* line 236, sass/_details.scss */
+  /* line 256, sass/_details.scss */
   .details__widget {
-    height: 60%; }
-    /* line 242, sass/_details.scss */
+    height: 60%;
+    display: flex;
+    flex-direction: column; }
+    @media only screen and (min-width: 601px) and (max-width: 768px) {
+      /* line 262, sass/_details.scss */
+      .details__widget-box {
+        display: none; } }
+    /* line 269, sass/_details.scss */
     .details__widget-box-grid {
       display: grid;
       grid-template-columns: 0.5fr 0.5fr;
       grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
       gap: 0px 10px; }
-      /* line 248, sass/_details.scss */
+      /* line 275, sass/_details.scss */
       .details__widget-box-grid-dates {
         font-family: 'Roboto', sans-serif;
         font-size: 15px;
         color: #a1abc5; }
-      /* line 255, sass/_details.scss */
+      /* line 282, sass/_details.scss */
       .details__widget-box-grid-checkin {
         grid-row: 2 / 3;
         grid-column: 1 / 3;
         color: #687499; }
-      /* line 261, sass/_details.scss */
+      /* line 288, sass/_details.scss */
       .details__widget-box-grid-group {
         grid-row: 3 / 4;
         grid-column: 1 / 2;
         color: #a1abc5; }
-      /* line 267, sass/_details.scss */
+      /* line 294, sass/_details.scss */
       .details__widget-box-grid-guests {
         grid-row: 4 / 5;
         grid-column: 1 / 2;
         color: #687499; }
-      /* line 273, sass/_details.scss */
+      /* line 300, sass/_details.scss */
       .details__widget-box-grid-bedrooms {
         grid-row: 3 / 4;
         grid-column: 2 / 3;
         color: #a1abc5; }
-      /* line 279, sass/_details.scss */
+      /* line 306, sass/_details.scss */
       .details__widget-box-grid-rooms {
         grid-row: 4 / 5;
         grid-column: 2 / 3;
         color: #687499; }
-    /* line 286, sass/_details.scss */
+    /* line 313, sass/_details.scss */
     .details__widget-box-price {
       font-family: 'Roboto', sans-serif;
       font-size: 14px;
       color: #001871; }
-    /* line 292, sass/_details.scss */
+    /* line 319, sass/_details.scss */
     .details__widget-box-cost {
       font-family: 'Montserrat';
       font-size: 20px;
@@ -376,19 +409,17 @@
   @media only screen and (max-width: 600px) {
     /* line 1, sass/_widget.scss */
     .details__widget {
-      max-height: 32%;
-      grid-column: 1 / 2;
-      grid-row: 1 / 2; } }
-  /* line 13, sass/_widget.scss */
+      grid-area: widget; } }
+  /* line 12, sass/_widget.scss */
   .details__widget-box {
     border: 1px solid #001871;
     border-radius: 8px;
     padding: 20px 25px; }
     @media only screen and (max-width: 600px) {
-      /* line 13, sass/_widget.scss */
+      /* line 12, sass/_widget.scss */
       .details__widget-box {
         border: none; } }
-    /* line 27, sass/_widget.scss */
+    /* line 25, sass/_widget.scss */
     .details__widget-box .widget-box-decoration {
       display: flex;
       justify-content: space-between;
@@ -396,16 +427,16 @@
       max-width: calc(100% - 50px);
       margin: 0 auto; }
       @media only screen and (max-width: 600px) {
-        /* line 27, sass/_widget.scss */
+        /* line 25, sass/_widget.scss */
         .details__widget-box .widget-box-decoration {
           display: none; } }
-      /* line 41, sass/_widget.scss */
+      /* line 39, sass/_widget.scss */
       .details__widget-box .widget-box-decoration .line {
         display: inline-block;
         width: 122px;
         opacity: 0.2;
         border-bottom: solid 1px #001871; }
-      /* line 50, sass/_widget.scss */
+      /* line 48, sass/_widget.scss */
       .details__widget-box .widget-box-decoration .diamond {
         display: inline-block;
         width: 12px;
@@ -413,10 +444,10 @@
         background-color: #21c1ff;
         transform: rotate(45deg); }
     @media only screen and (max-width: 600px) {
-      /* line 62, sass/_widget.scss */
+      /* line 60, sass/_widget.scss */
       .details__widget-box-grid {
         display: none; } }
-    /* line 69, sass/_widget.scss */
+    /* line 67, sass/_widget.scss */
     .details__widget-box-grid-checkin {
       background-image: url(../src/calendar.svg);
       background-position: 98% 30%;
@@ -428,7 +459,7 @@
       border: solid 1px #ebeef3;
       border-radius: 8px;
       cursor: pointer; }
-    /* line 84, sass/_widget.scss */
+    /* line 82, sass/_widget.scss */
     .details__widget-box-grid-guests, .details__widget-box-grid-rooms {
       height: 40px;
       padding-top: 10px;
@@ -437,7 +468,7 @@
       border-radius: 6px;
       display: relative;
       cursor: pointer; }
-    /* line 95, sass/_widget.scss */
+    /* line 93, sass/_widget.scss */
     .details__widget-box-grid-guests::after {
       display: block;
       width: 0;
@@ -449,7 +480,7 @@
       border-color: #2196f3 transparent transparent;
       float: right;
       margin: 8px 10px 7px 20px; }
-    /* line 108, sass/_widget.scss */
+    /* line 106, sass/_widget.scss */
     .details__widget-box-grid-rooms::after {
       display: block;
       width: 0;
@@ -461,7 +492,7 @@
       border-color: #2196f3 transparent transparent;
       float: right;
       margin: 8px 10px 7px 20px; }
-    /* line 126, sass/_widget.scss */
+    /* line 124, sass/_widget.scss */
     .details__widget-box .book button {
       width: 295px;
       height: 50px;
@@ -477,7 +508,7 @@
       border-radius: 8px;
       cursor: pointer;
       clip-path: polygon(8px 0%, calc(100%  -  8px) 0%, 100% 8px, 100% calc(100%  -  8px), calc(100%  -  8px) 100%, 8px 100%, 0% calc(100%  -  8px), 0% 8px); }
-    /* line 145, sass/_widget.scss */
+    /* line 143, sass/_widget.scss */
     .details__widget-box .book .heart {
       display: inline-block;
       background-image: url(../src/inactive-heart.svg);
@@ -486,7 +517,7 @@
       object-fit: contain;
       background-repeat: no-repeat;
       margin-left: -5px; }
-    /* line 160, sass/_widget.scss */
+    /* line 158, sass/_widget.scss */
     .details__widget-box .phone-icon {
       display: inline-block;
       background-image: url(../src/phone.svg);
@@ -497,17 +528,17 @@
       background-repeat: no-repeat;
       margin-left: -10px;
       margin-bottom: -5px; }
-    /* line 172, sass/_widget.scss */
+    /* line 170, sass/_widget.scss */
     .details__widget-box .phone-details {
       display: inline-block;
       font-family: 'Roboto', sans-serif;
       font-size: 16px;
       color: #001871; }
-      /* line 178, sass/_widget.scss */
+      /* line 176, sass/_widget.scss */
       .details__widget-box .phone-details span {
         text-transform: uppercase;
         color: #9b9b9b; }
-    /* line 185, sass/_widget.scss */
+    /* line 183, sass/_widget.scss */
     .details__widget-box .availability {
       width: 347px;
       height: 100px;
@@ -523,16 +554,16 @@
       background-size: 35px;
       background-repeat: no-repeat;
       color: #001871; }
-      /* line 203, sass/_widget.scss */
+      /* line 201, sass/_widget.scss */
       .details__widget-box .availability a {
         color: #b56f00;
         text-decoration: none; }
-  /* line 212, sass/_widget.scss */
+  /* line 210, sass/_widget.scss */
   .details__widget .pdf {
     margin-left: 30px;
     display: flex;
     align-items: center; }
-    /* line 219, sass/_widget.scss */
+    /* line 223, sass/_widget.scss */
     .details__widget .pdf-icon {
       background-image: url(../src/pdf-icon.svg);
       width: 25px;
@@ -542,18 +573,18 @@
       background-size: 20px auto;
       color: #616185;
       margin-right: 13px; }
-    /* line 230, sass/_widget.scss */
+    /* line 234, sass/_widget.scss */
     .details__widget .pdf-text {
       display: inline;
       font-family: 'Roboto', sans-serif;
       font-size: 16px;
       color: #001871; }
-  /* line 239, sass/_widget.scss */
+  /* line 243, sass/_widget.scss */
   .details__widget .share {
     margin-left: 30px;
     display: flex;
     align-items: center; }
-    /* line 246, sass/_widget.scss */
+    /* line 250, sass/_widget.scss */
     .details__widget .share-icon {
       background-image: url(../src/share-icon.svg);
       width: 25px;
@@ -563,7 +594,7 @@
       background-size: 20px auto;
       color: #616185;
       margin-right: 13px; }
-    /* line 257, sass/_widget.scss */
+    /* line 261, sass/_widget.scss */
     .details__widget .share-text {
       display: inline;
       font-family: 'Roboto', sans-serif;
