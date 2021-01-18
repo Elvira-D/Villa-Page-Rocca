@@ -1,6 +1,5 @@
 .details {
     width: 90%;
-    height: 90%;
     margin-left: 100px;
 
     display: grid;
@@ -14,11 +13,11 @@
     "video widget"
     "accordion widget";
 
-    // 
+    
 
     @media only screen and (max-width: 768px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr max-content max-content max-content 1fr;
+        grid-template-rows: max-content max-content max-content max-content 1fr;
         gap: 0px 0px;
         grid-template-areas:
         "widget"
@@ -29,6 +28,11 @@
         "list";
 
         margin-left: 50px;
+
+        @media only screen and (max-width: 600px) {
+            margin-left: 25px;
+                  
+        }
               
     }
 
@@ -66,7 +70,7 @@
             
             
 
-            @media only screen and (min-width:600px) and (max-width: 768px) {
+            @media only screen and (max-width: 768px) {
                 margin-top: 0;
                 margin-bottom: 0;
                       
@@ -254,9 +258,8 @@
     }
                 
     &__widget {
-        height: 60%;
-        display: flex;
-        flex-direction: column;
+        margin: 10px 75px;
+
         
 
         &-box {
