@@ -30,7 +30,7 @@
         margin-left: 50px;
 
         @media only screen and (max-width: 600px) {
-            margin-left: 25px;
+            margin-left: 15px;
                   
         }
               
@@ -46,6 +46,7 @@
             
             grid-area: features;
             display: inline;
+            margin: 20px 20px 10px 20px;
             
                   
         }
@@ -130,7 +131,8 @@
         @media only screen and (max-width: 600px) {
             
             grid-area: quote;
-            margin-top: 30px;
+            width: 80vw;
+            margin: 30px auto 0 auto;
                   
         }
 
@@ -169,6 +171,7 @@
         @media only screen and (max-width: 600px) {
             
             grid-area: description;
+            width: 90vw;
                   
         }
 
@@ -199,6 +202,7 @@
         @media only screen and (max-width: 600px) {
             
             grid-area: video;
+            max-width: 90vw;
                   
         }
         
@@ -268,10 +272,12 @@
 
         &-box {
 
+                        
             @media only screen and (min-width: 601px) and (max-width: 768px) {
                 display: none;
-                      
+                
             }
+            
 
             &-grid {
                 display: grid;

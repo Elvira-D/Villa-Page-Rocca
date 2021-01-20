@@ -17,6 +17,7 @@
 
         @media only screen and (max-width: 600px) {
             border: none;
+            padding: 0;
                   
         }   
         
@@ -196,6 +197,11 @@
             background-size: 35px;
             background-repeat: no-repeat;
             color: $dark-royal-blue;
+
+            @media only screen and (max-width: 600px) {
+                margin-left: -4px;
+                
+            }
             
 
             & a {
