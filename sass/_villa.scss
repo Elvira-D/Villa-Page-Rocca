@@ -34,6 +34,10 @@
                 height: 250px;
                 margin-left: 20px;
 
+            @media only screen and (max-width: 600px) {
+                margin-left: 0;
+            }
+
             @media only screen and (min-width: 601px) and (max-width: 768px) {
                 width: 600px;
                 margin: 0 50px;
@@ -79,7 +83,8 @@
                     }
 
                     @media only screen and (max-width: 600px) {
-                        margin-right: 20px;
+                        margin-right: 0;
+                        display: block;
                               
                     }
 
@@ -128,6 +133,10 @@
                 width: 47px;
                 height: 48px;
                 margin: 34px 18px;
+
+                @media only screen and (max-width: 600px) {
+                    margin: 25px 0 0 0;
+                }
             }
     
             &-description {
@@ -141,6 +150,12 @@
                 position: relative;
                 bottom: 103px;
                 left: 80px;
+
+                @media only screen and (max-width: 600px) {
+                    width: 290px;
+                    bottom: 70px;
+                    left: 65px;
+                }
                 
                 
             }
@@ -174,7 +189,8 @@
                 margin-top: 110px;
 
                 @media only screen and (max-width: 600px) {
-                    margin-top: 0;
+                    margin-top: 50px;
+                    width: 114%;
                           
                 }
             }
